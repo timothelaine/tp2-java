@@ -29,21 +29,11 @@ public class BanqueApp {
         }
 
 //      Ajout des comptes courrants au clients
-        /*for (int i = 0; i < clients.size(); i++ ) {
-//          Création du compte courrant
-            CompteCourant cc = new CompteCourant(clients.get(i).getNumero() * 1000 + 1, clients.get(i));
-//          Création du compte épargne
-            CompteEpargne ce = new CompteEpargne(clients.get(i).getNumero() * 1000 + 2, clients.get(i), cc, 50);
-
-//          Ajout des comptes créés au client
-            clients.get(i).addCompte(cc);
-            clients.get(i).addCompte(ce);
-        }*/
-
         for (Client client : clients) {
             CompteCourant compteCourant = new CompteCourant(client.getNumero() * 1000 + 1, client);
+            CompteEpargne compteEpargne = new CompteEpargne(client.getNumero() * 1000 + 2, client, compteCourant, 50)
             client.addCompte(compteCourant);
-            client.addCompte(new CompteEpargne(client.getNumero() * 1000 + 2, client, compteCourant, 50));
+            client.addCompte(compteEpargne);
         }
 
 //      Ajout de crédit sur les comptes d'un client
@@ -51,8 +41,8 @@ public class BanqueApp {
         clients.get(1).getComptes().get(1).credit(300);
 
 //      Listing des client de la banque
-        for (int i = 0; i < clients.size(); i++ ) {
-            System.out.println("\t" + clients.get(i));
+        for (Client client : clients) {
+            System.out.println("\t" + client);
         }
 
 //        Transfert du compte
