@@ -27,7 +27,8 @@ public class BanqueApp {
         }
 
 //        Ajout des comptes au clients
-
-
+        for (int i = 0; i < clients.size(); i++ ) {
+             clients.get(i);
+        }
     }
 }
