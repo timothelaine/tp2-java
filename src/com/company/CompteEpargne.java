@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.ArrayList;
+
 public class CompteEpargne extends Compte {
 
     private float montantTransfert;
@@ -14,7 +16,7 @@ public class CompteEpargne extends Compte {
 
     public void transfert(){
         this.compteTransfert.setSolde(this.compteTransfert.getSolde() - this.montantTransfert);
-        this.setSolde(this.montantTransfert);
+        this.setSolde(this.getSolde() +  this.montantTransfert);
     }
 
     public float getMontantTransfert(){
