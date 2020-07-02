@@ -24,8 +24,8 @@ public class BanqueApp {
 
 //      Listing des client de la banque
         System.out.println("Liste initiale des clients:");
-        for (int i = 0; i < clients.size(); i++ ) {
-            System.out.println("\t" + clients.get(i));
+        for (Client client : clients) {
+            System.out.println("\t" + client);
         }
 
 //      Ajout des comptes courrants au clients
