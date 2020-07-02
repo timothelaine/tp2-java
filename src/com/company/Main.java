@@ -3,7 +3,6 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-
             Client c1 = new Client(1,"Martin");
             Client c2= new Client(2,"Dupond");
             Compte com1 = new Compte(10,c1);
