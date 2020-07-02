@@ -29,7 +29,7 @@ public class BanqueApp {
         }
 
 //      Ajout des comptes courrants au clients
-        for (int i = 0; i < clients.size(); i++ ) {
+        /*for (int i = 0; i < clients.size(); i++ ) {
 //          Création du compte courrant
             CompteCourant cc = new CompteCourant(clients.get(i).getNumero() * 1000 + 1, clients.get(i));
 //          Création du compte épargne
@@ -38,6 +38,12 @@ public class BanqueApp {
 //          Ajout des comptes créés au client
             clients.get(i).addCompte(cc);
             clients.get(i).addCompte(ce);
+        }*/
+
+        for (Client client : clients) {
+            CompteCourant compteCourant = new CompteCourant(client.getNumero() * 1000 + 1, client);
+            client.addCompte(compteCourant);
+            client.addCompte(new CompteEpargne(client.getNumero() * 1000 + 2, client, compteCourant, 50));
         }
 
 //      Ajout de crédit sur les comptes d'un client
