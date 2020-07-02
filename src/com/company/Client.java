@@ -30,9 +30,6 @@ public class Client {
         this.nom = nom;
     }
 
-//    public String toString() {
-//        return new String("Client " +this.numero+" "+this.nom+"\n");
-//    }
     public String toString() {
         StringBuilder infos = new StringBuilder();
         infos.append("Client ").append(this.numero).append(" - ").append(this.nom).append("\n");
