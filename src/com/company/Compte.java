@@ -14,6 +14,10 @@ public class Compte {
         return this.solde;
     }
 
+    public void setSolde(float solde) {
+         this.solde = solde;
+    }
+
     public Client getClient() {
         return this.client;
     }

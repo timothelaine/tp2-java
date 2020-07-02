@@ -13,7 +13,8 @@ public class CompteEpargne extends Compte {
     }
 
     public void transfert(){
-
+        this.compteTransfert.setSolde(this.compteTransfert.getSolde() - this.montantTransfert);
+        this.setSolde(this.montantTransfert);
     }
 
     public float getMontantTransfert(){
