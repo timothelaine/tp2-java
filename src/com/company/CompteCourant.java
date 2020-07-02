@@ -7,6 +7,6 @@ public class CompteCourant extends Compte{
     }
 
     public String toString() {
-        return new String("Compte courant no: " + this.getNumero() + " - Solde : " + this.getSolde());
+        return new String("Compte courant no " + this.getNumero() + " - Solde : " + this.getSolde());
     }
 }
