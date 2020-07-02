@@ -31,7 +31,7 @@ public class BanqueApp {
 //      Ajout des comptes courrants au clients
         for (Client client : clients) {
             CompteCourant compteCourant = new CompteCourant(client.getNumero() * 1000 + 1, client);
-            CompteEpargne compteEpargne = new CompteEpargne(client.getNumero() * 1000 + 2, client, compteCourant, 50)
+            CompteEpargne compteEpargne = new CompteEpargne(client.getNumero() * 1000 + 2, client, compteCourant, 50);
             client.addCompte(compteCourant);
             client.addCompte(compteEpargne);
         }
