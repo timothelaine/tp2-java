@@ -50,8 +50,8 @@ public class BanqueApp {
         ce1.transfert();
 
 //      Listing des client de la banque
-        for (int i = 0; i < clients.size(); i++ ) {
-            System.out.println("\t" + clients.get(i));
+        for (Client client : clients) {
+            System.out.println("\t" + client);
         }
 
         Fenetre fenetre = new Fenetre(clients.get(1));
