@@ -20,7 +20,7 @@ public class BanqueApp {
         clients.add(c3);
         clients.add(c4);
 
-        System.out.println("Banque DuTresor \n ======================");
+        System.out.println("Banque Du Tresor \n ======================");
 
 //      Listing des client de la banque
         System.out.println("Liste initiale des clients:");
@@ -53,9 +53,5 @@ public class BanqueApp {
         for (Client client : clients) {
             System.out.println("\t" + client);
         }
-
-        Fenetre fenetre = new Fenetre(clients.get(1));
-
-
     }
 }
